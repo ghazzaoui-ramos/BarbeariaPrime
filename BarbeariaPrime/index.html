@@ -1,0 +1,737 @@
+
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <link
+        rel="stylesheet"
+        href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css"
+    >
+    <title>Barbearia Prime | Estilo e Precisão</title>
+
+    <!-- DESCRIÇÃO DO SITE -->
+    <meta
+        name="description"
+        content="Conheça o projeto demonstrativo Barbearia Prime: um site moderno de barbearia com serviços, equipe, galeria e solicitação de agendamento pelo WhatsApp."
+    >
+
+    <!-- INFORMAÇÕES PARA COMPARTILHAMENTO -->
+    <meta property="og:type" content="website">
+
+    <meta
+        property="og:title"
+        content="Barbearia Prime | Estilo, Precisão e Atitude"
+    >
+
+    <meta
+        property="og:description"
+        content="Projeto demonstrativo de um site moderno para barbearia, com galeria, serviços e agendamento pelo WhatsApp."
+    >
+
+    <meta property="og:locale" content="pt_BR">
+
+    <!-- EVITA INDEXAÇÃO DE UM ESTABELECIMENTO FICTÍCIO -->
+    <meta name="robots" content="noindex, nofollow">
+
+
+    <link rel="stylesheet" href="css/style.css">
+    <script src="js/main.js" defer></script>
+</head>
+
+<body>
+
+    <!-- CABEÇALHO -->
+    <header class="header">
+        <div class="container header-content">
+
+            <a href="#inicio" class="logo">
+                BARBEARIA <span>PRIME</span>
+            </a>
+
+            <nav class="nav" id="menu-navegacao" aria-label="Menu principal">
+                <a href="#inicio">Início</a>
+                <a href="#servicos">Serviços</a>
+                <a href="#sobre">Sobre</a>
+                <a href="#equipe">Equipe</a>
+                <a href="#galeria">Galeria</a>
+                <a href="#contato">Contato</a>
+            </nav>
+
+            <a href="#agendamento" class="btn btn-outline header-cta">
+                Agendar horário
+            </a>
+
+            <button
+                class="menu-toggle"
+                id="menu-toggle"
+                type="button"
+                aria-label="Abrir menu"
+                aria-expanded="false"
+                aria-controls="menu-navegacao"
+            >
+                ☰
+            </button>
+
+        </div>
+    </header>
+
+    <main>
+
+        <!-- BANNER PRINCIPAL -->
+        <section class="hero" id="inicio">
+
+            <div class="container hero-content">
+
+                <span class="hero-subtitle">
+                    MAIS QUE UM CORTE, UMA EXPERIÊNCIA
+                </span>
+
+                <h1>
+                    SEU ESTILO.<br>
+                    NOSSA <span>PRECISÃO.</span>
+                </h1>
+
+                <p>
+                    Tradição e modernidade em cada detalhe.
+                    Cortes impecáveis, barba alinhada e uma
+                    experiência feita para você.
+                </p>
+
+                <div class="hero-buttons">
+                    <a href="#agendamento" class="btn btn-primary">
+                        Agendar meu horário
+                    </a>
+
+                    <a href="#servicos" class="btn btn-outline">
+                        Conhecer serviços
+                    </a>
+                </div>
+
+            </div>
+
+        </section>
+
+        <!-- SERVIÇOS -->
+        <section class="services" id="servicos">
+            <div class="container">
+
+                <div class="section-heading">
+                    <span class="section-subtitle">O QUE OFERECEMOS</span>
+                    <h2>NOSSOS <span>SERVIÇOS</span></h2>
+                    <p>
+                        Serviços pensados para quem valoriza
+                        estilo, qualidade e atenção aos detalhes.
+                    </p>
+                </div>
+
+                <div class="services-grid">
+
+                    <article class="service-card">
+                        <span class="service-number">01</span>
+                        <h3>CORTE MASCULINO</h3>
+                        <p>
+                            Cortes clássicos e modernos,
+                            personalizados para o seu estilo.
+                        </p>
+                        <div class="service-footer">
+                            <strong>R$ 45,00</strong>
+                            <a href="#agendamento">Agendar →</a>
+                        </div>
+                    </article>
+
+                    <article class="service-card">
+                        <span class="service-number">02</span>
+                        <h3>BARBA COMPLETA</h3>
+                        <p>
+                            Modelagem, alinhamento e acabamento
+                            para uma barba impecável.
+                        </p>
+                        <div class="service-footer">
+                            <strong>R$ 35,00</strong>
+                            <a href="#agendamento">Agendar →</a>
+                        </div>
+                    </article>
+
+                    <article class="service-card">
+                        <span class="service-number">03</span>
+                        <h3>CORTE + BARBA</h3>
+                        <p>
+                            Uma experiência completa para
+                            renovar seu visual.
+                        </p>
+                        <div class="service-footer">
+                            <strong>R$ 70,00</strong>
+                            <a href="#agendamento">Agendar →</a>
+                        </div>
+                    </article>
+
+                    <article class="service-card">
+                        <span class="service-number">04</span>
+                        <h3>ACABAMENTO</h3>
+                        <p>
+                            Ajustes e finalização para manter
+                            o corte sempre alinhado.
+                        </p>
+                        <div class="service-footer">
+                            <strong>R$ 20,00</strong>
+                            <a href="#agendamento">Agendar →</a>
+                        </div>
+                    </article>
+
+                </div>
+
+            </div>
+        </section>
+
+
+        <!-- SOBRE A BARBEARIA -->
+        <section class="about" id="sobre">
+                <div class="container about-content">
+
+                    <div class="about-image">
+                        <img
+                            src="images/galeria/sobre-barbearia.jpg"
+                            alt="Interior moderno da Barbearia Prime"
+                            loading="lazy"
+                        >
+                    </div>
+
+                    <div class="about-text">
+                        <span class="section-subtitle">
+                            CONHEÇA A PRIME
+                        </span>
+
+                        <h2>
+                            MAIS QUE UMA BARBEARIA.
+                            <span>UMA EXPERIÊNCIA.</span>
+                        </h2>
+
+                        <p>
+                            Na Barbearia Prime, acreditamos que um bom
+                            corte vai muito além da aparência.
+                            É sobre confiança, personalidade e atitude.
+                        </p>
+
+                        <p>
+                            Unimos técnicas tradicionais, tendências
+                            modernas e atenção aos detalhes para oferecer
+                            uma experiência única em cada atendimento.
+                        </p>
+
+                        <div class="about-highlights">
+                            <div>
+                                <strong>01</strong>
+                                <span>Atendimento personalizado</span>
+                            </div>
+
+                            <div>
+                                <strong>02</strong>
+                                <span>Profissionais especializados</span>
+                            </div>
+
+                            <div>
+                                <strong>03</strong>
+                                <span>Ambiente moderno e confortável</span>
+                            </div>
+                        </div>
+
+                        <a href="#agendamento" class="btn btn-primary">
+                            Agendar meu horário
+                        </a>
+
+
+                    <!-- REDES SOCIAIS -->
+                    <div class="about-social">
+                        <p>ACOMPANHE A PRIME</p>
+
+                        <div class="social-links">
+
+                        <a
+                            href="https://wa.me/5511999999999"
+                            target="_blank"
+                            rel="noopener noreferrer"
+                            aria-label="WhatsApp"
+                            title="WhatsApp"
+                        >
+                            <i class="fa-brands fa-whatsapp" aria-hidden="true"></i>
+                        </a>
+
+                        <a
+                            href="https://www.instagram.com/"
+                            target="_blank"
+                            rel="noopener noreferrer"
+                            aria-label="Instagram"
+                            title="Instagram"
+                        >
+                            <i class="fa-brands fa-instagram" aria-hidden="true"></i>
+                        </a>
+
+                        <a
+                            href="https://www.tiktok.com/"
+                            target="_blank"
+                            rel="noopener noreferrer"
+                            aria-label="TikTok"
+                            title="TikTok"
+                        >
+                            <i class="fa-brands fa-tiktok" aria-hidden="true"></i>
+                        </a>
+
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+        <!-- NOSSA EQUIPE -->
+        <section class="team" id="equipe">
+            <div class="container">
+
+                <div class="section-heading">
+                    <span class="section-subtitle">
+                        PROFISSIONAIS DA PRIME
+                    </span>
+
+                    <h2>NOSSA <span>EQUIPE</span></h2>
+
+                    <p>
+                        Profissionais dedicados a transformar
+                        cada atendimento em uma experiência única.
+                    </p>
+                </div>
+
+                <div class="team-grid">
+
+                    <article class="team-card">
+                        <div class="team-image">
+                            <img
+                                src="images/equipe/barbeiro-1.jpg"
+                                alt="Retrato de Rafael Martins, barbeiro"
+                                loading="lazy"
+                            >
+                        </div>
+
+                        <div class="team-info">
+                            <h3>RAFAEL MARTINS</h3>
+                            <p>Especialista em cortes clássicos</p>
+                        </div>
+                    </article>
+
+                    <article class="team-card">
+                        <div class="team-image">
+                            <img
+                                src="images/equipe/barbeiro-2.jpg"
+                                alt="Retrato de Lucas Oliveira, barbeiro"
+                                loading="lazy"
+                            >
+                        </div>
+
+                        <div class="team-info">
+                            <h3>LUCAS OLIVEIRA</h3>
+                            <p>Especialista em degradê e freestyle</p>
+                        </div>
+                    </article>
+
+                    <article class="team-card">
+                        <div class="team-image">
+                            <img
+                                src="images/equipe/barbeiro-3.jpg"
+                                alt="Retrato de André Costa, barbeiro"
+                                loading="lazy"
+                            >
+                        </div>
+
+                        <div class="team-info">
+                            <h3>ANDRÉ COSTA</h3>
+                            <p>Especialista em barba e visagismo</p>
+                        </div>
+                    </article>
+
+                </div>
+            </div>
+        </section>
+
+        <!-- GALERIA -->
+        <section class="gallery" id="galeria">
+            <div class="container">
+
+                <div class="section-heading">
+                    <span class="section-subtitle">
+                        NOSSO TRABALHO
+                    </span>
+
+                    <h2>GALERIA DE <span>ESTILOS</span></h2>
+
+                    <p>
+                        Cada corte é uma expressão de personalidade.
+                        Conheça alguns estilos que inspiram nosso trabalho.
+                    </p>
+                </div>
+
+                <div class="gallery-grid">
+
+                    <div class="gallery-item">
+                        <img src="images/galeria/corte-1.jpg"
+                            alt="Corte masculino degradê"
+                            loading="lazy">
+                        <span>DEGRADÊ</span>
+                    </div>
+
+                    <div class="gallery-item">
+                        <img src="images/galeria/corte-2.jpg"
+                            alt="Corte masculino clássico"
+                            loading="lazy">
+                        <span>CLÁSSICO</span>
+                    </div>
+
+                    <div class="gallery-item">
+                        <img src="images/galeria/corte-3.jpg"
+                            alt="Barba masculina alinhada"
+                            loading="lazy">
+                        <span>BARBA</span>
+                    </div>
+
+                    <div class="gallery-item">
+                        <img src="images/galeria/corte-4.jpg"
+                            alt="Corte masculino moderno"
+                            loading="lazy">
+                        <span>MODERNO</span>
+                    </div>
+
+                    <div class="gallery-item">
+                        <img src="images/galeria/corte-5.jpg"
+                            alt="Corte masculino freestyle"
+                            loading="lazy">
+                        <span>FREESTYLE</span>
+                    </div>
+
+                    <div class="gallery-item">
+                        <img src="images/galeria/corte-6.jpg"
+                            alt="Corte masculino com acabamento"
+                            loading="lazy">
+                        <span>ACABAMENTO</span>
+                    </div>
+
+                </div>
+            </div>
+        </section>
+
+
+        <!-- AGENDAMENTO -->
+        <section class="booking" id="agendamento">
+            <div class="container booking-content">
+
+                <div class="booking-info">
+                    <span class="section-subtitle">
+                        RESERVE SEU HORÁRIO
+                    </span>
+
+                    <h2>
+                        SEU PRÓXIMO CORTE
+                        <span>COMEÇA AQUI.</span>
+                    </h2>
+
+                    <p>
+                        Escolha seu serviço, profissional e
+                        horário de preferência. Nossa equipe
+                        confirmará a disponibilidade pelo WhatsApp.
+                    </p>
+
+                    <div class="booking-benefits">
+                        <div>
+                            <span>01</span>
+                            <p>Escolha seu serviço favorito</p>
+                        </div>
+
+                        <div>
+                            <span>02</span>
+                            <p>Selecione o profissional</p>
+                        </div>
+
+                        <div>
+                            <span>03</span>
+                            <p>Solicite seu horário pelo WhatsApp</p>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="booking-form-wrapper">
+
+                    <h3>AGENDAR HORÁRIO</h3>
+
+                    <form id="form-agendamento">
+
+                        <div class="form-group">
+                            <label for="nome-cliente">
+                                Seu nome
+                            </label>
+                            <input
+                                type="text"
+                                id="nome-cliente"
+                                name="nome"
+                                placeholder="Digite seu nome"
+                                autocomplete="name"
+                                required
+                            >
+                        </div>
+
+                        <div class="form-group">
+                            <label for="servico">
+                                Serviço
+                            </label>
+                            <select id="servico" name="servico" required>
+                                <option value="">
+                                    Selecione um serviço
+                                </option>
+                                <option value="Corte masculino">
+                                    Corte masculino — R$ 45,00
+                                </option>
+                                <option value="Barba completa">
+                                    Barba completa — R$ 35,00
+                                </option>
+                                <option value="Corte + barba">
+                                    Corte + barba — R$ 70,00
+                                </option>
+                                <option value="Acabamento">
+                                    Acabamento — R$ 20,00
+                                </option>
+                            </select>
+                        </div>
+
+                        <div class="form-group">
+                            <label for="barbeiro">
+                                Profissional
+                            </label>
+                            <select id="barbeiro" name="barbeiro" required>
+                                <option value="">
+                                    Selecione um profissional
+                                </option>
+                                <option value="Rafael Martins">
+                                    Rafael Martins
+                                </option>
+                                <option value="Lucas Oliveira">
+                                    Lucas Oliveira
+                                </option>
+                                <option value="André Costa">
+                                    André Costa
+                                </option>
+                                <option value="Sem preferência">
+                                    Sem preferência
+                                </option>
+                            </select>
+                        </div>
+
+                        <div class="form-row">
+                            <div class="form-group">
+                                <label for="data-agendamento">
+                                    Data
+                                </label>
+                                <input
+                                    type="date"
+                                    id="data-agendamento"
+                                    name="data"
+                                    required
+                                >
+                            </div>
+
+                            <div class="form-group">
+                                <label for="horario-agendamento">
+                                    Horário
+                                </label>
+                                <input
+                                    type="time"
+                                    id="horario-agendamento"
+                                    name="horario"
+                                    required
+                                >
+                            </div>
+                        </div>
+
+                        <button
+                            type="submit"
+                            class="btn btn-primary booking-submit"
+                        >
+                            Solicitar pelo WhatsApp
+                        </button>
+
+                        <p class="booking-disclaimer">
+                            O horário estará sujeito à confirmação
+                            da barbearia.
+                        </p>
+
+                    </form>
+
+                </div>
+
+            </div>
+        </section>
+
+
+<!-- CONTATO -->
+        <section class="contact" id="contato">
+            <div class="container">
+
+                <div class="section-heading">
+                    <span class="section-subtitle">
+                        VENHA NOS CONHECER
+                    </span>
+
+                    <h2>FALE COM A <span>PRIME</span></h2>
+
+                    <p>
+                        Estamos prontos para receber você.
+                        Confira nossos canais de atendimento.
+                    </p>
+                </div>
+
+                <div class="contact-grid">
+
+                    <article class="contact-card">
+                        <span class="contact-icon">⌖</span>
+
+                        <h3>ENDEREÇO</h3>
+
+                        <p>
+                            Endereço demonstrativo<br>
+                            São Paulo — SP
+                        </p>
+                    </article>
+
+                    <article class="contact-card">
+                        <span class="contact-icon">◷</span>
+
+                        <h3>HORÁRIOS</h3>
+
+                        <p>
+                            Segunda a sexta: 09h às 20h<br>
+                            Sábado: 09h às 18h<br>
+                            Domingo: Fechado
+                        </p>
+                    </article>
+
+                    <article class="contact-card">
+                        <span class="contact-icon">✆</span>
+
+                        <h3>ATENDIMENTO</h3>
+
+                        <p>
+                            Agendamentos pelo WhatsApp<br>
+                            Atendimento mediante confirmação
+                        </p>
+
+                        <a href="#agendamento" class="contact-link">
+                            Solicitar agendamento →
+                        </a>
+                    </article>
+
+                </div>
+
+            </div>
+        </section>
+
+    </main>
+  
+    <!-- RODAPÉ -->
+    <footer class="footer">
+        <div class="container">
+
+            <div class="footer-content">
+
+                <!-- MARCA E REDES SOCIAIS -->
+                <div class="footer-brand">
+                    <a href="#inicio" class="logo">
+                        BARBEARIA <span>PRIME</span>
+                    </a>
+
+                    <p>
+                        Estilo, precisão e atitude.
+                        Uma experiência que vai além do corte.
+                    </p>
+
+                    <div class="footer-social">
+                        <div class="social-links">
+
+                            <a
+                                href="https://wa.me/5511999999999"
+                                target="_blank"
+                                rel="noopener noreferrer"
+                                aria-label="WhatsApp"
+                                title="WhatsApp"
+                            >
+                                <i class="fa-brands fa-whatsapp"
+                                aria-hidden="true"></i>
+                            </a>
+
+                            <a
+                                href="https://www.instagram.com/"
+                                target="_blank"
+                                rel="noopener noreferrer"
+                                aria-label="Instagram"
+                                title="Instagram"
+                            >
+                                <i class="fa-brands fa-instagram"
+                                aria-hidden="true"></i>
+                            </a>
+
+                            <a
+                                href="https://www.tiktok.com/"
+                                target="_blank"
+                                rel="noopener noreferrer"
+                                aria-label="TikTok"
+                                title="TikTok"
+                            >
+                                <i class="fa-brands fa-tiktok"
+                                aria-hidden="true"></i>
+                            </a>
+
+                        </div>
+                    </div>
+                </div>
+
+                <!-- NAVEGAÇÃO -->
+                <div class="footer-links">
+                    <h3>NAVEGAÇÃO</h3>
+
+                    <a href="#inicio">Início</a>
+                    <a href="#servicos">Serviços</a>
+                    <a href="#sobre">Sobre</a>
+                    <a href="#equipe">Equipe</a>
+                    <a href="#galeria">Galeria</a>
+                    <a href="#agendamento">Agendamento</a>
+                </div>
+
+                <!-- CONTATO -->
+                <div class="footer-contact">
+                    <h3>CONTATO</h3>
+
+                    <p>São Paulo — SP</p>
+                    <p>Segunda a sábado</p>
+
+                    <a href="#agendamento">
+                        Agendar horário →
+                    </a>
+                </div>
+
+            </div>
+
+            <!-- DIREITOS AUTORAIS -->
+            <div class="footer-bottom">
+                <p>
+                    © <span id="ano-atual"></span>
+                    Barbearia Prime. Todos os direitos reservados.
+                </p>
+
+                <p>
+                    Projeto demonstrativo para portfólio.
+                    Estabelecimento e informações fictícios.
+                </p>
+            </div>
+
+        </div>
+    </footer>
+
+
+
+</body>
+</html>

@@ -1,0 +1,1182 @@
+
+/* ===================================
+   BARBEARIA PRIME — ESTILOS GERAIS
+=================================== */
+
+@import url('https://fonts.googleapis.com/css2?family=Barlow+Condensed:wght@500;600;700;800&family=Inter:wght@400;500;600;700&display=swap');
+
+:root {
+    --preto: #111111;
+    --grafite: #1e1e1e;
+    --cinza: #333333;
+    --prata: #b0b0b0;
+    --branco: #f5f5f5;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+    font-family: 'Inter', sans-serif;
+    background-color: var(--preto);
+    color: var(--branco);
+    line-height: 1.6;
+}
+
+a {
+    color: inherit;
+    text-decoration: none;
+}
+
+button {
+    font: inherit;
+    cursor: pointer;
+}
+
+.container {
+    width: min(90%, 1200px);
+    margin: 0 auto;
+}
+
+/* ===================================
+   CABEÇALHO
+=================================== */
+
+.header {
+    position: relative;
+    z-index: 100;
+    background-color: var(--grafite);
+    border-bottom: 1px solid var(--cinza);
+}
+
+.header-content {
+    min-height: 90px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 24px;
+}
+
+.logo {
+    font-family: 'Barlow Condensed', sans-serif;
+    font-size: 1.7rem;
+    font-weight: 800;
+    letter-spacing: 1px;
+    white-space: nowrap;
+}
+
+.logo span {
+    color: var(--prata);
+}
+
+.nav {
+    display: flex;
+    align-items: center;
+    gap: 22px;
+}
+
+.nav a {
+    font-size: 0.85rem;
+    font-weight: 500;
+    transition: color 0.3s;
+}
+
+.nav a:hover {
+    color: var(--prata);
+}
+
+.menu-toggle {
+    display: none;
+    background: none;
+    border: 0;
+    color: var(--branco);
+    font-size: 1.8rem;
+}
+
+/* ===================================
+   BOTÕES
+=================================== */
+
+.btn {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    min-height: 48px;
+    padding: 12px 24px;
+    border: 1px solid transparent;
+    font-size: 0.85rem;
+    font-weight: 700;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    transition: background-color 0.3s, color 0.3s;
+}
+
+.btn-primary {
+    background-color: var(--branco);
+    color: var(--preto);
+}
+
+.btn-primary:hover {
+    background-color: var(--prata);
+}
+
+.btn-outline {
+    border-color: var(--prata);
+    color: var(--branco);
+}
+
+.btn-outline:hover {
+    background-color: var(--branco);
+    color: var(--preto);
+}
+
+/* ===================================
+   BANNER PRINCIPAL
+=================================== */
+
+.hero {
+    min-height: 650px;
+    display: flex;
+    align-items: center;
+    background:
+        linear-gradient(
+            90deg,
+            rgba(0, 0, 0, 0.95) 0%,
+            rgba(0, 0, 0, 0.75) 55%,
+            rgba(0, 0, 0, 0.45) 100%
+        ),
+        url("../images/banner/barbearia-prime.png");
+
+}
+
+.hero-content {
+    padding-top: 100px;
+    padding-bottom: 100px;
+}
+
+.hero-subtitle {
+    display: inline-block;
+    margin-bottom: 20px;
+    color: var(--prata);
+    font-size: 0.8rem;
+    font-weight: 700;
+    letter-spacing: 3px;
+}
+
+.hero h1 {
+    max-width: 850px;
+    font-family: 'Barlow Condensed', sans-serif;
+    font-size: clamp(3.5rem, 7vw, 7rem);
+    font-weight: 800;
+    line-height: 1;
+    letter-spacing: 1px;
+}
+
+.hero h1 span {
+    color: var(--prata);
+}
+
+.hero p {
+    max-width: 550px;
+    margin-top: 28px;
+    color: #cccccc;
+    font-size: 1rem;
+}
+
+.hero-buttons {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 16px;
+    margin-top: 35px;
+}
+
+/* ===================================
+   RESPONSIVIDADE
+=================================== */
+
+@media (max-width: 1100px) {
+    .header-cta {
+        display: none;
+    }
+
+    .nav {
+        gap: 14px;
+    }
+}
+
+@media (max-width: 768px) {
+    .header-content {
+        min-height: 75px;
+    }
+
+    .menu-toggle {
+        display: block;
+    }
+
+    .nav {
+        display: none;
+    }
+
+    .hero {
+        min-height: 550px;
+    }
+
+    .hero-content {
+        padding-top: 80px;
+        padding-bottom: 80px;
+    }
+
+    .hero h1 {
+        font-size: clamp(3rem, 11vw, 5rem);
+    }
+
+    .hero-subtitle {
+        font-size: 0.7rem;
+        letter-spacing: 2px;
+    }
+}
+
+@media (max-width: 480px) {
+    .hero-buttons {
+        flex-direction: column;
+        align-items: stretch;
+    }
+
+    .hero-buttons .btn {
+        width: 100%;
+    }
+}
+
+/* ===================================
+   SEÇÃO DE SERVIÇOS
+=================================== */
+
+.services {
+    padding: 100px 0;
+    background-color: var(--grafite);
+}
+
+.section-heading {
+    max-width: 650px;
+    margin-bottom: 50px;
+}
+
+.section-subtitle {
+    display: block;
+    margin-bottom: 12px;
+    color: var(--prata);
+    font-size: 0.8rem;
+    font-weight: 700;
+    letter-spacing: 3px;
+}
+
+.section-heading h2 {
+    font-family: 'Barlow Condensed', sans-serif;
+    font-size: clamp(2.5rem, 5vw, 4rem);
+    line-height: 1.1;
+}
+
+.section-heading h2 span {
+    color: var(--prata);
+}
+
+.section-heading p {
+    margin-top: 18px;
+    color: #aaaaaa;
+}
+
+.services-grid {
+    display: grid;
+    grid-template-columns: repeat(4, minmax(0, 1fr));
+    gap: 20px;
+}
+
+.service-card {
+    display: flex;
+    flex-direction: column;
+    padding: 30px 24px;
+    background-color: var(--preto);
+    border: 1px solid var(--cinza);
+    transition: transform 0.3s, border-color 0.3s;
+}
+
+.service-card:hover {
+    transform: translateY(-6px);
+    border-color: var(--prata);
+}
+
+.service-number {
+    margin-bottom: 35px;
+    color: #777777;
+    font-family: 'Barlow Condensed', sans-serif;
+    font-size: 2.5rem;
+    font-weight: 700;
+}
+
+.service-card h3 {
+    margin-bottom: 14px;
+    font-family: 'Barlow Condensed', sans-serif;
+    font-size: 1.6rem;
+    line-height: 1.2;
+}
+
+.service-card p {
+    flex: 1;
+    margin-bottom: 30px;
+    color: #aaaaaa;
+    font-size: 0.9rem;
+}
+
+.service-footer {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 10px;
+    padding-top: 20px;
+    border-top: 1px solid var(--cinza);
+}
+
+.service-footer strong {
+    font-size: 1.1rem;
+}
+
+.service-footer a {
+    color: var(--prata);
+    font-size: 0.85rem;
+    font-weight: 600;
+    white-space: nowrap;
+}
+
+.service-footer a:hover {
+    color: var(--branco);
+}
+
+/* RESPONSIVIDADE DOS SERVIÇOS */
+
+@media (max-width: 1000px) {
+    .services-grid {
+        grid-template-columns: repeat(2, minmax(0, 1fr));
+    }
+}
+
+@media (max-width: 600px) {
+    .services {
+        padding: 70px 0;
+    }
+
+    .services-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .service-card {
+        padding: 26px;
+    }
+
+    .service-number {
+        margin-bottom: 20px;
+    }
+}
+
+/* ===================================
+   SOBRE A BARBEARIA
+=================================== */
+
+.about {
+    padding: 110px 0;
+    background-color: var(--preto);
+}
+
+.about-content {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    align-items: center;
+    gap: 70px;
+}
+
+.about-image {
+    height: 550px;
+    overflow: hidden;
+    border: 1px solid var(--cinza);
+}
+
+.about-image img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    display: block;
+    filter: grayscale(35%);
+    transition: transform 0.5s, filter 0.5s;
+}
+
+.about-image:hover img {
+    transform: scale(1.05);
+    filter: grayscale(0%);
+}
+
+.about-text h2 {
+    margin-bottom: 28px;
+    font-family: 'Barlow Condensed', sans-serif;
+    font-size: clamp(2.5rem, 4vw, 4rem);
+    line-height: 1.1;
+}
+
+.about-text h2 span {
+    color: var(--prata);
+}
+
+.about-text p {
+    margin-bottom: 20px;
+    color: #aaaaaa;
+    font-size: 0.95rem;
+}
+
+.about-highlights {
+    display: flex;
+    flex-direction: column;
+    gap: 18px;
+    margin: 35px 0;
+}
+
+.about-highlights div {
+    display: flex;
+    align-items: center;
+    gap: 20px;
+    padding-bottom: 15px;
+    border-bottom: 1px solid var(--cinza);
+}
+
+.about-highlights strong {
+    color: var(--prata);
+    font-family: 'Barlow Condensed', sans-serif;
+    font-size: 1.5rem;
+}
+
+.about-highlights span {
+    font-size: 0.9rem;
+}
+
+/* RESPONSIVIDADE */
+
+@media (max-width: 900px) {
+    .about-content {
+        grid-template-columns: 1fr;
+        gap: 40px;
+    }
+
+    .about-image {
+        height: 450px;
+    }
+}
+
+@media (max-width: 600px) {
+    .about {
+        padding: 70px 0;
+    }
+
+    .about-image {
+        height: 320px;
+    }
+
+    .about-text h2 {
+        font-size: 2.7rem;
+    }
+}
+
+/* ===================================
+   NOSSA EQUIPE
+=================================== */
+
+.team {
+    padding: 100px 0;
+    background-color: var(--grafite);
+}
+
+.team-grid {
+    display: grid;
+    grid-template-columns: repeat(3, minmax(0, 1fr));
+    gap: 25px;
+}
+
+.team-card {
+    background-color: var(--preto);
+    border: 1px solid var(--cinza);
+    overflow: hidden;
+    transition: transform 0.3s, border-color 0.3s;
+}
+
+.team-card:hover {
+    transform: translateY(-6px);
+    border-color: var(--prata);
+}
+
+.team-image {
+    height: 380px;
+    overflow: hidden;
+}
+
+.team-image img {
+    width: 100%;
+    height: 100%;
+    display: block;
+    object-fit: cover;
+    filter: grayscale(100%);
+    transition: transform 0.5s, filter 0.5s;
+}
+
+.team-card:hover .team-image img {
+    transform: scale(1.05);
+    filter: grayscale(20%);
+}
+
+.team-info {
+    padding: 25px;
+}
+
+.team-info h3 {
+    margin-bottom: 6px;
+    font-family: 'Barlow Condensed', sans-serif;
+    font-size: 1.8rem;
+}
+
+.team-info p {
+    color: var(--prata);
+    font-size: 0.85rem;
+}
+
+/* RESPONSIVIDADE */
+
+@media (max-width: 900px) {
+    .team-grid {
+        grid-template-columns: repeat(2, minmax(0, 1fr));
+    }
+}
+
+@media (max-width: 600px) {
+    .team {
+        padding: 70px 0;
+    }
+
+    .team-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .team-image {
+        height: 400px;
+    }
+}
+
+/* ===================================
+   GALERIA DE ESTILOS
+=================================== */
+
+.gallery {
+    padding: 100px 0;
+    background-color: var(--preto);
+}
+
+.gallery-grid {
+    display: grid;
+    grid-template-columns: repeat(3, minmax(0, 1fr));
+    gap: 20px;
+}
+
+.gallery-item {
+    position: relative;
+    height: 350px;
+    overflow: hidden;
+    background-color: var(--grafite);
+}
+
+.gallery-item img {
+    width: 100%;
+    height: 100%;
+    display: block;
+    object-fit: cover;
+    transition: transform 0.5s, filter 0.5s;
+    filter: grayscale(70%);
+}
+
+.gallery-item:hover img {
+    transform: scale(1.08);
+    filter: grayscale(0%);
+}
+
+.gallery-item::after {
+    content: "";
+    position: absolute;
+    inset: 0;
+    background: linear-gradient(
+        transparent 50%,
+        rgba(0, 0, 0, 0.8)
+    );
+    pointer-events: none;
+}
+
+.gallery-item span {
+    position: absolute;
+    bottom: 22px;
+    left: 22px;
+    z-index: 1;
+    color: var(--branco);
+    font-family: 'Barlow Condensed', sans-serif;
+    font-size: 1.6rem;
+    font-weight: 700;
+    letter-spacing: 1px;
+}
+
+/* RESPONSIVIDADE */
+
+@media (max-width: 900px) {
+    .gallery-grid {
+        grid-template-columns: repeat(2, minmax(0, 1fr));
+    }
+}
+
+@media (max-width: 600px) {
+    .gallery {
+        padding: 70px 0;
+    }
+
+    .gallery-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .gallery-item {
+        height: 320px;
+    }
+}
+
+/* ===================================
+   SEÇÃO DE AGENDAMENTO
+=================================== */
+
+.booking {
+    padding: 110px 0;
+    background-color: var(--grafite);
+}
+
+.booking-content {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    align-items: center;
+    gap: 70px;
+}
+
+/* INFORMAÇÕES */
+
+.booking-info h2 {
+    margin-bottom: 25px;
+    font-family: 'Barlow Condensed', sans-serif;
+    font-size: clamp(2.8rem, 5vw, 4.5rem);
+    line-height: 1.1;
+}
+
+.booking-info h2 span {
+    display: block;
+    color: var(--prata);
+}
+
+.booking-info > p {
+    max-width: 500px;
+    color: #aaaaaa;
+    font-size: 0.95rem;
+}
+
+/* BENEFÍCIOS */
+
+.booking-benefits {
+    display: flex;
+    flex-direction: column;
+    gap: 22px;
+    margin-top: 40px;
+}
+
+.booking-benefits div {
+    display: flex;
+    align-items: center;
+    gap: 20px;
+    padding-bottom: 18px;
+    border-bottom: 1px solid var(--cinza);
+}
+
+.booking-benefits span {
+    color: var(--prata);
+    font-family: 'Barlow Condensed', sans-serif;
+    font-size: 1.8rem;
+    font-weight: 700;
+}
+
+.booking-benefits p {
+    font-size: 0.9rem;
+}
+
+/* FORMULÁRIO */
+
+.booking-form-wrapper {
+    padding: 40px;
+    background-color: var(--preto);
+    border: 1px solid var(--cinza);
+}
+
+.booking-form-wrapper h3 {
+    margin-bottom: 30px;
+    font-family: 'Barlow Condensed', sans-serif;
+    font-size: 2rem;
+    letter-spacing: 1px;
+}
+
+.form-group {
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+    margin-bottom: 22px;
+}
+
+.form-group label {
+    font-size: 0.85rem;
+    font-weight: 600;
+    color: var(--branco);
+}
+
+.form-group input,
+.form-group select {
+    width: 100%;
+    min-width: 0;
+    height: 50px;
+    padding: 0 15px;
+    background-color: var(--grafite);
+    border: 1px solid var(--cinza);
+    border-radius: 0;
+    color: var(--branco);
+    font-family: 'Inter', sans-serif;
+    font-size: 0.9rem;
+    color-scheme: dark;
+    outline: none;
+    transition: border-color 0.3s;
+}
+
+.form-group input:focus,
+.form-group select:focus {
+    border-color: var(--prata);
+}
+
+.form-group input::placeholder {
+    color: #888888;
+}
+
+.form-row {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 15px;
+}
+
+.booking-submit {
+    width: 100%;
+    margin-top: 10px;
+    border: none;
+}
+
+.booking-disclaimer {
+    margin-top: 18px;
+    color: #888888;
+    font-size: 0.75rem;
+    text-align: center;
+}
+
+/* RESPONSIVIDADE */
+
+@media (max-width: 950px) {
+    .booking-content {
+        grid-template-columns: 1fr;
+        gap: 50px;
+    }
+}
+
+@media (max-width: 600px) {
+    .booking {
+        padding: 70px 0;
+    }
+
+    .booking-form-wrapper {
+        padding: 25px 20px;
+    }
+
+    .form-row {
+        grid-template-columns: 1fr;
+        gap: 0;
+    }
+
+    .booking-info h2 {
+        font-size: 3rem;
+    }
+}
+
+/* ===================================
+   CONTATO
+=================================== */
+
+.contact {
+    padding: 100px 0;
+    background-color: var(--preto);
+}
+
+.contact-grid {
+    display: grid;
+    grid-template-columns: repeat(3, minmax(0, 1fr));
+    gap: 24px;
+}
+
+.contact-card {
+    padding: 35px 30px;
+    background-color: var(--grafite);
+    border: 1px solid var(--cinza);
+    transition: border-color 0.3s, transform 0.3s;
+}
+
+.contact-card:hover {
+    border-color: var(--prata);
+    transform: translateY(-5px);
+}
+
+.contact-icon {
+    display: block;
+    margin-bottom: 25px;
+    color: var(--prata);
+    font-size: 2.5rem;
+    line-height: 1;
+}
+
+.contact-card h3 {
+    margin-bottom: 15px;
+    font-family: 'Barlow Condensed', sans-serif;
+    font-size: 1.7rem;
+    letter-spacing: 1px;
+}
+
+.contact-card p {
+    color: #aaaaaa;
+    font-size: 0.9rem;
+    line-height: 1.9;
+}
+
+.contact-link {
+    display: inline-block;
+    margin-top: 20px;
+    color: var(--branco);
+    font-size: 0.85rem;
+    font-weight: 600;
+    border-bottom: 1px solid var(--prata);
+    padding-bottom: 5px;
+}
+
+.contact-link:hover {
+    color: var(--prata);
+}
+
+/* RESPONSIVIDADE */
+
+@media (max-width: 900px) {
+    .contact-grid {
+        grid-template-columns: repeat(2, minmax(0, 1fr));
+    }
+}
+
+@media (max-width: 600px) {
+    .contact {
+        padding: 70px 0;
+    }
+
+    .contact-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .contact-card {
+        padding: 28px;
+    }
+}
+
+/* ===================================
+   RODAPÉ
+=================================== */
+
+.footer {
+    padding: 70px 0 25px;
+    background-color: #090909;
+    border-top: 1px solid var(--cinza);
+}
+
+.footer-content {
+    display: grid;
+    grid-template-columns: 2fr 1fr 1fr;
+    gap: 60px;
+    padding-bottom: 60px;
+}
+
+.footer-brand p {
+    max-width: 300px;
+    margin-top: 18px;
+    color: #999999;
+    font-size: 0.9rem;
+}
+
+.footer-links,
+.footer-contact {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 12px;
+}
+
+.footer-links h3,
+.footer-contact h3 {
+    margin-bottom: 10px;
+    font-family: 'Barlow Condensed', sans-serif;
+    font-size: 1.3rem;
+    letter-spacing: 1px;
+}
+
+.footer-links a,
+.footer-contact a,
+.footer-contact p {
+    color: #999999;
+    font-size: 0.85rem;
+}
+
+.footer-links a:hover,
+.footer-contact a:hover {
+    color: var(--branco);
+}
+
+.footer-bottom {
+    display: flex;
+    justify-content: space-between;
+    gap: 20px;
+    padding-top: 25px;
+    border-top: 1px solid var(--cinza);
+}
+
+.footer-bottom p {
+    color: #777777;
+    font-size: 0.75rem;
+}
+
+/* RESPONSIVIDADE */
+
+@media (max-width: 900px) {
+    .footer-content {
+        grid-template-columns: 1fr 1fr;
+        gap: 40px;
+    }
+}
+
+@media (max-width: 600px) {
+    .footer-content {
+        grid-template-columns: 1fr;
+        gap: 35px;
+    }
+
+    .footer-bottom {
+        flex-direction: column;
+        gap: 10px;
+    }
+}
+
+/* ===================================
+   REDES SOCIAIS — SOBRE
+=================================== */
+
+.about-social {
+    margin-top: 35px;
+    padding-top: 25px;
+    border-top: 1px solid var(--cinza);
+}
+
+.about-social > p {
+    margin-bottom: 18px;
+    color: var(--prata);
+    font-family: 'Barlow Condensed', sans-serif;
+    font-size: 1rem;
+    font-weight: 600;
+    letter-spacing: 2px;
+}
+
+.social-links {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 12px;
+}
+
+
+.social-links a {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    width: 55px;
+    height: 55px;
+    padding: 0;
+
+    border: 1px solid var(--cinza);
+    border-radius: 50%;
+
+    color: var(--branco);
+    font-size: 1.5rem;
+    text-decoration: none;
+
+    transition: all 0.3s ease;
+}
+
+.social-links a:hover {
+    background-color: var(--branco);
+    border-color: var(--branco);
+    color: var(--preto);
+
+    transform: translateY(-5px);
+}
+
+.social-links a:focus-visible {
+    outline: 2px solid var(--prata);
+    outline-offset: 4px;
+}
+
+/* REDES SOCIAIS NO RODAPÉ */
+
+.footer-social {
+    margin-top: 25px;
+}
+
+.footer-social .social-links {
+    gap: 12px;
+}
+
+.footer-social .social-links a {
+    width: 45px;
+    height: 45px;
+    font-size: 1.2rem;
+}
+
+
+/* ===================================
+   MENU MOBILE — FUNCIONAL
+=================================== */
+
+@media (max-width: 768px) {
+
+    .header-content {
+        position: relative;
+    }
+
+    .menu-toggle {
+        display: block;
+        position: relative;
+        z-index: 20;
+        cursor: pointer;
+    }
+
+    .nav {
+        display: none;
+        position: absolute;
+        top: 100%;
+        left: 0;
+        right: 0;
+        z-index: 15;
+
+        flex-direction: column;
+        align-items: stretch;
+        gap: 0;
+
+        padding: 15px;
+        background-color: var(--preto);
+        border: 1px solid var(--cinza);
+        box-shadow: 0 15px 30px rgba(0, 0, 0, 0.4);
+    }
+
+    .nav.active {
+        display: flex;
+    }
+
+    .nav a {
+        display: block;
+        padding: 14px 12px;
+        border-bottom: 1px solid var(--cinza);
+    }
+
+    .nav a:last-child {
+        border-bottom: none;
+    }
+}
+
+/* ===================================
+   ANIMAÇÕES E NAVEGAÇÃO
+=================================== */
+
+/* Rolagem suave entre as seções */
+html {
+    scroll-behavior: smooth;
+    scroll-padding-top: 90px;
+}
+
+/* Animação de entrada */
+@keyframes aparecerSuavemente {
+    from {
+        opacity: 0;
+        transform: translateY(20px);
+    }
+
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+/* Entrada suave do banner */
+.hero h1,
+.hero p,
+.hero .btn {
+    animation: aparecerSuavemente 0.8s ease both;
+}
+
+.hero p {
+    animation-delay: 0.15s;
+}
+
+.hero .btn {
+    animation-delay: 0.3s;
+}
+
+/* Destaque ao passar o mouse */
+.service-card,
+.team-card {
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.service-card:hover,
+.team-card:hover {
+    transform: translateY(-6px);
+    box-shadow: 0 15px 30px rgba(0, 0, 0, 0.25);
+}
+
+/* Acessibilidade: respeita a preferência por menos movimento */
+@media (prefers-reduced-motion: reduce) {
+    html {
+        scroll-behavior: auto;
+    }
+
+    .hero h1,
+    .hero p,
+    .hero .btn {
+        animation: none;
+    }
+
+    .service-card,
+    .team-card {
+        transition: none;
+    }
+}
